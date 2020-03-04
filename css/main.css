@@ -191,6 +191,7 @@ section {
 }
 #about-shower iframe {
     display: block;
+    padding: .25em;
 }
 #registry-info a {
     display: inline-block;

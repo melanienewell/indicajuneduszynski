@@ -1,0 +1,214 @@
+/*A way of saying that the padding should fit within the width and not add to the width*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*Setting fonts*/
+:root {
+/*Setting font family*/
+    --ff-primary: 'Righteous', cursive;
+    --ff-secondary: 'Righteous', cursive;
+/*Setting font weight*/
+    --fw-reg: 400;
+    --fw-bold: 700;
+/*Setting colors*/
+    --clr-light: #BFB306;
+    --clr-dark: #000000;
+    --clr-accent: #2A5931;
+/*Setting font-size*/
+    --fs-h1: 3rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+/*Box Shadow*/
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+    /*Second shadow layer*/
+            0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
+}
+
+@media (min-width: 1200px) {
+   /*Changing font sizes to be bigger at larger screen sizes*/
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/*General Styles*/
+
+/*Smooths the scrolling experience between sections when link is clicked*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: /* Gradient in Hex */
+    linear-gradient(to right, #FFCBA1 0%, 32.53968358039856%, #7C9A7F 65.07936716079712%, 82.53968358039856%, #E4E3DF 100%);
+
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+section {
+    padding: 3em;
+}
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--bs);
+}
+a {
+    text-decoration: none;
+    color: var(--clr-light);
+    font-weight: bold;
+    background-color: var(--clr-dark);
+    padding: .5em;
+    margin: .5em;
+    border-radius: 20px;
+}
+a.unstyled {
+    text-decoration: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+}
+a:hover {
+    color: var(--clr-accent);
+    cursor: pointer;
+}
+header h1 {
+    text-align: center;
+    font-variant: small-caps;
+}
+nav li {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav li a {
+    padding: 5px;
+}
+#header::after {
+    content: '';
+    display: block;
+    width: 35%;
+    height: 1px;
+    margin: 2em auto 0;
+    background: var(--clr-accent);
+
+}
+#about-shower::before {
+    content: '';
+    display: block;
+    width: 35%;
+    height: 1px;
+    margin: 2em auto 0;
+    background: var(--clr-accent);
+
+}
+#about-shower::after {
+    content: '';
+    display: block;
+    width: 35%;
+    height: 1px;
+    margin: 2em auto 0;
+    background: var(--clr-accent);
+
+}
+@media (min-width: 600px) {
+    header img {
+    max-width: 600px;
+    margin: 0 auto;
+}
+header h1 {
+    letter-spacing: .5em;
+}
+h2 {
+    letter-spacing: .5em;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+}
+nav li {
+    display: inline-block;
+}
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+}
+@media (min-width: 800px) {
+    #about-us {
+        display: grid;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-rows: 125px 343px;
+    }
+    #about-us h2 {
+        text-align: right;
+    }
+    #about-us p {
+        text-align: right;
+        grid-column: 2;
+    }
+}
+@media (min-width: 800px) {
+    #about-indica {
+        display: grid;
+        grid-template-areas:
+        "h2 img";
+        grid-column-gap: 1em;
+        grid-template-rows: 125px 245px;
+    }
+    #about-indica h2 {
+        text-align: left;
+    }
+    #about-indica p {
+        grid-column: 1;
+        text-align: left;
+    }
+    #indica-img {
+        max-width: 500px;
+        grid-row: 1;
+        grid-column: 2;
+    }
+}
+#about-shower iframe {
+    display: block;
+}
+#registry-info a {
+    display: inline-block;
+}
+footer {
+    text-align: center;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}
+footer a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px;
+}
+.social-media {
+    margin-right: 5px;
+    padding: 5px;
+}
+footer a:hover {
+    color: var(--clr-accent);
+}

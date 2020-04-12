@@ -14,9 +14,9 @@
     --fw-reg: 400;
     --fw-bold: 700;
 /*Setting colors*/
-    --clr-light: #BFB306;
+    --clr-light: #E9D7CA;
     --clr-dark: #000000;
-    --clr-accent: #2A5931;
+    --clr-accent: #B97244;
 /*Setting font-size*/
     --fs-h1: 3rem;
     --fs-h2: 2rem;
@@ -46,7 +46,7 @@ html {
 }
 body {
     background: /* Gradient in Hex */
-    linear-gradient(to right, #FFCBA1 0%, 32.53968358039856%, #7C9A7F 65.07936716079712%, 82.53968358039856%, #E4E3DF 100%);
+    linear-gradient(to right, #C73C61 0%, 32.53968358039856%, #E9D7CA 65.07936716079712%, 82.53968358039856%, #0378A6 100%);
 
     color: var(--clr-dark);
     margin: 0;
@@ -110,7 +110,7 @@ nav li a {
     background: var(--clr-accent);
 
 }
-#about-shower::before {
+#pics::before {
     content: '';
     display: block;
     width: 35%;
@@ -119,7 +119,7 @@ nav li a {
     background: var(--clr-accent);
 
 }
-#about-shower::after {
+#pics::after {
     content: '';
     display: block;
     width: 35%;
@@ -134,7 +134,7 @@ nav li a {
     margin: 0 auto;
 }
 header h1 {
-    letter-spacing: .5em;
+    letter-spacing: .2em;
 }
 h2 {
     letter-spacing: .5em;
@@ -189,7 +189,8 @@ section {
         grid-column: 2;
     }
 }
-#about-shower iframe {
+#pics iframe {
+    max-width: 100%;
     display: block;
     padding: .25em;
 }
